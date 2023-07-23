@@ -48,9 +48,10 @@ public class teleOpExample extends OpMode {
 
         // If you have multiple motors and you want to set them both to the same joystick, use a variable
         double forward = gamepad1.left_stick_y;
+        double strafe = gamepad1.left_stick_x;
 
-        exampleMotor.setPower(forward);
-        exampleMotor2.setPower(forward);
+        exampleMotor.setPower(forward + strafe);
+        exampleMotor2.setPower(forward + strafe);
 
         // To move a servo, use an if statement
 
